@@ -1,0 +1,252 @@
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:16px;
+}
+
+body{
+    font-family:"Times New Roman", serif;
+    background:#dceffc;
+    color:#222;
+    line-height:1.3;
+}
+
+/* =====================================
+   A4 PAGE
+===================================== */
+
+@page{
+    size:A4 portrait;
+    margin:8mm;
+}
+
+/* =====================================
+   RESUME
+===================================== */
+
+.resume{
+    width:210mm;
+    min-height:297mm;
+    margin:10px auto;
+    padding:10mm;
+    background:#fff;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+header{
+    text-align:center;
+    border-bottom:2px solid #333;
+    padding-bottom:8px;
+    margin-bottom:10px;
+}
+
+header h1{
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+header h2{
+    font-size:16px;
+    font-weight:normal;
+    margin-top:3px;
+}
+
+/* =====================================
+   TWO COLUMN
+===================================== */
+
+.container{
+    display:grid;
+    grid-template-columns:38% 62%;
+    column-gap:14px;
+}
+
+/* =====================================
+   LEFT & RIGHT
+===================================== */
+
+.left,
+.right{
+    display:flex;
+    flex-direction:column;
+}
+
+/* =====================================
+   SECTION
+===================================== */
+
+section{
+    margin-bottom:8px;
+}
+
+section h3{
+    background:#3b3b3b;
+    color:#fff;
+    padding:5px 8px;
+    font-size:15px;
+    text-transform:uppercase;
+    margin-bottom:6px;
+}
+
+section h4{
+    font-size:14px;
+    margin-bottom:3px;
+    color:#000;
+}
+
+section p{
+    font-size:14px;
+    line-height:1.35;
+    text-align:justify;
+}
+
+/* =====================================
+   EDUCATION
+===================================== */
+
+.edu{
+    margin-bottom:8px;
+}
+
+/* =====================================
+   SKILLS
+===================================== */
+
+.skill-group{
+    margin-bottom:8px;
+}
+
+/* =====================================
+   PROJECTS
+===================================== */
+
+.project{
+    margin-bottom:8px;
+}
+
+/* =====================================
+   LISTS
+===================================== */
+
+ul{
+    margin-left:18px;
+    margin-top:2px;
+}
+
+li{
+    font-size:14px;
+    margin-bottom:3px;
+    line-height:1.35;
+    text-align:justify;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+    margin-top:12px;
+    border-top:1px solid #999;
+    padding-top:8px;
+}
+
+footer h3{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+footer p{
+    font-size:14px;
+    text-align:justify;
+    line-height:1.35;
+}
+
+/* =====================================
+   SIGNATURE
+===================================== */
+
+.signature{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:18px;
+}
+
+.left-sign,
+.right-sign{
+    font-size:13px;
+}
+
+.right-sign{
+    font-weight:bold;
+    text-align:right;
+}
+
+/* =====================================
+   LINKS
+===================================== */
+
+a{
+    color:#000;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* =====================================
+   PRINT SETTINGS
+===================================== */
+
+@media print{
+
+    @page{
+        size:A4 portrait;
+        margin:8mm;
+    }
+
+    html,
+    body{
+        width:210mm;
+        height:297mm;
+        background:#fff;
+        margin:0;
+        padding:0;
+    }
+
+    .resume{
+        width:100%;
+        min-height:100%;
+        margin:0;
+        padding:0;
+        box-shadow:none;
+        border:none;
+    }
+
+    section,
+    .project,
+    .edu,
+    footer{
+        page-break-inside:avoid;
+        break-inside:avoid;
+    }
+
+    *{
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+    }
+}
