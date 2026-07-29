@@ -1,252 +1,259 @@
-/* =====================================
-   RESET
-===================================== */
+/* ==============================
+   Global reset
+============================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{
-    font-size:16px;
+html {
+    background: #e5e5e5;
 }
 
-body{
-    font-family:"Times New Roman", serif;
-    background:#dceffc;
-    color:#222;
-    line-height:1.3;
+body {
+    color: #252525;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    line-height: 1.35;
 }
 
-/* =====================================
-   A4 PAGE
-===================================== */
+/* ==============================
+   A4 resume page
+============================== */
 
-@page{
-    size:A4 portrait;
-    margin:8mm;
+.resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    padding: 9mm 8mm 8mm;
+    background: #ffffff;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.16);
 }
 
-/* =====================================
-   RESUME
-===================================== */
+/* ==============================
+   Header
+============================== */
 
-.resume{
-    width:210mm;
-    min-height:297mm;
-    margin:10px auto;
-    padding:10mm;
-    background:#fff;
-    box-shadow:0 0 10px rgba(0,0,0,.15);
+.resume-header {
+    padding: 0 0 4mm;
+    text-align: center;
 }
 
-/* =====================================
-   HEADER
-===================================== */
-
-header{
-    text-align:center;
-    border-bottom:2px solid #333;
-    padding-bottom:8px;
-    margin-bottom:10px;
+.resume-header h1 {
+    margin-bottom: 1mm;
+    color: #222222;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
-header h1{
-    font-size:30px;
-    font-weight:bold;
-    letter-spacing:.5px;
+.resume-header p {
+    font-size: 17px;
 }
 
-header h2{
-    font-size:16px;
-    font-weight:normal;
-    margin-top:3px;
+.header-line {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 3mm;
+    background: #3d3d3d;
 }
 
-/* =====================================
-   TWO COLUMN
-===================================== */
+/* ==============================
+   Two-column structure
+============================== */
 
-.container{
-    display:grid;
-    grid-template-columns:38% 62%;
-    column-gap:14px;
+.resume-columns {
+    display: grid;
+    grid-template-columns: 38% 62%;
+    column-gap: 4mm;
+    align-items: start;
 }
 
-/* =====================================
-   LEFT & RIGHT
-===================================== */
-
-.left,
-.right{
-    display:flex;
-    flex-direction:column;
+.left-column,
+.right-column {
+    min-width: 0;
 }
 
-/* =====================================
-   SECTION
-===================================== */
+/* ==============================
+   Section styling
+============================== */
 
-section{
-    margin-bottom:8px;
+.resume-section {
+    margin-bottom: 4mm;
+    break-inside: avoid;
 }
 
-section h3{
-    background:#3b3b3b;
-    color:#fff;
-    padding:5px 8px;
-    font-size:15px;
-    text-transform:uppercase;
-    margin-bottom:6px;
+.section-title {
+    margin-bottom: 2mm;
+    padding: 1.2mm 2mm;
+    background: #3c3c3c;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
-section h4{
-    font-size:14px;
-    margin-bottom:3px;
-    color:#000;
+.content-block {
+    margin-bottom: 3mm;
 }
 
-section p{
-    font-size:14px;
-    line-height:1.35;
-    text-align:justify;
+.content-block:last-child {
+    margin-bottom: 0;
 }
 
-/* =====================================
-   EDUCATION
-===================================== */
-
-.edu{
-    margin-bottom:8px;
+.content-block h3 {
+    margin-bottom: 0.8mm;
+    color: #181818;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-/* =====================================
-   SKILLS
-===================================== */
-
-.skill-group{
-    margin-bottom:8px;
+.content-block p {
+    margin-bottom: 0.5mm;
 }
 
-/* =====================================
-   PROJECTS
-===================================== */
-
-.project{
-    margin-bottom:8px;
+.description {
+    text-align: justify;
 }
 
-/* =====================================
-   LISTS
-===================================== */
+/* ==============================
+   Lists
+============================== */
 
-ul{
-    margin-left:18px;
-    margin-top:2px;
+ul {
+    padding-left: 5mm;
 }
 
-li{
-    font-size:14px;
-    margin-bottom:3px;
-    line-height:1.35;
-    text-align:justify;
+li {
+    margin-bottom: 1mm;
+    padding-left: 0.5mm;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
-
-footer{
-    margin-top:12px;
-    border-top:1px solid #999;
-    padding-top:8px;
+li:last-child {
+    margin-bottom: 0;
 }
 
-footer h3{
-    font-size:15px;
-    margin-bottom:5px;
+/* ==============================
+   Contact details
+============================== */
+
+.contact-list {
+    padding-left: 5mm;
 }
 
-footer p{
-    font-size:14px;
-    text-align:justify;
-    line-height:1.35;
+.contact-list li {
+    padding-left: 0;
+    overflow-wrap: anywhere;
 }
 
-/* =====================================
-   SIGNATURE
-===================================== */
-
-.signature{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    margin-top:18px;
+.contact-icon {
+    display: inline-block;
+    width: 6mm;
+    text-align: center;
 }
 
-.left-sign,
-.right-sign{
-    font-size:13px;
+.contact-list a {
+    color: #252525;
+    text-decoration: none;
 }
 
-.right-sign{
-    font-weight:bold;
-    text-align:right;
+/* ==============================
+   Footer and declaration
+============================== */
+
+.resume-footer {
+    margin-top: 2mm;
+    padding-top: 2mm;
+    border-top: 1px solid #999999;
+    break-inside: avoid;
 }
 
-/* =====================================
-   LINKS
-===================================== */
-
-a{
-    color:#000;
-    text-decoration:none;
+.resume-footer h2 {
+    margin-bottom: 1mm;
+    font-size: 15px;
 }
 
-a:hover{
-    text-decoration:underline;
+.resume-footer > p {
+    margin-bottom: 4mm;
 }
 
-/* =====================================
-   PRINT SETTINGS
-===================================== */
+.signature-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-@media print{
+/* ==============================
+   Responsive view
+============================== */
 
-    @page{
-        size:A4 portrait;
-        margin:8mm;
+@media screen and (max-width: 850px) {
+    html {
+        background: #ffffff;
     }
 
+    .resume {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    .resume-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column {
+        margin-bottom: 4mm;
+    }
+}
+
+/* ==============================
+   A4 print configuration
+============================== */
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
     html,
-    body{
-        width:210mm;
-        height:297mm;
-        background:#fff;
-        margin:0;
-        padding:0;
+    body {
+        width: 210mm;
+        min-height: 297mm;
+        background: #ffffff;
     }
 
-    .resume{
-        width:100%;
-        min-height:100%;
-        margin:0;
-        padding:0;
-        box-shadow:none;
-        border:none;
+    body {
+        font-size: 13px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    section,
-    .project,
-    .edu,
-    footer{
-        page-break-inside:avoid;
-        break-inside:avoid;
+    .resume {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 9mm 8mm 8mm;
+        box-shadow: none;
     }
 
-    *{
-        -webkit-print-color-adjust:exact;
-        print-color-adjust:exact;
+    .resume-columns {
+        grid-template-columns: 38% 62%;
+    }
+
+    .section-title {
+        background: #3c3c3c !important;
+        color: #ffffff !important;
+    }
+
+    a {
+        color: #252525;
+        text-decoration: none;
     }
 }
